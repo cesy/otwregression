@@ -3,8 +3,8 @@ require 'rubygems'
 require 'rspec'
 require 'mocha'
 
-$user = "testy"
-$password = "t3st1ng"
+$user = example
+$password = example
 
 lib_path = File.expand_path("#{File.dirname(__FILE__)}/../lib/sites")
 $LOAD_PATH.unshift lib_path unless $LOAD_PATH.include?(lib_path)
