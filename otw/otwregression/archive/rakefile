@@ -29,3 +29,9 @@ Cucumber::Rake::Task.new(:update) do |t|
   t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
                     "--tags @update",]
 end
+
+Cucumber::Rake::Task.new(:rerun) do |t|
+  file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"  
+  t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
+                    "--tags @failing",]
+end

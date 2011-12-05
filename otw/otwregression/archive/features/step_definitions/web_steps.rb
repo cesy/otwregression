@@ -39,19 +39,19 @@ Then /^the people page loads$/ do
 end
 
 Then /^the fandoms page loads$/ do
-  @site.header.text.include?("Fandoms")
+  @site.header.header.text.include?("Fandoms")
 end
 
 Then /^the works page loads$/ do
-  @site.header.text.include?("works")
+  @site.header.header.text.include?("1 - 20 of 1000 Works found")
 end
 
 Then /^the bookmarks page loads$/ do
-  @site.header.text.include?("bookmarks")
+  @site.header.header.text.include?("Bookmarks")
 end
 
 Then /^the collections page loads$/ do
-  @site.header.text.include?("collection")
+  @site.header.header.text.include?("Collections")
 end
 
 Then /^I should see "([^"]*)" Notice$/ do |arg1|
@@ -61,14 +61,6 @@ Then /^I should see "([^"]*)" Notice$/ do |arg1|
   rescue
   @site.header.notice.text.include?(arg1)  
   end
-end
-
-When /^I press Post$/ do
-  @site.works_new_page.post_btn.click
-end
-
-When /^I go to the works page$/ do
-  @site.header.works_link.click
 end
 
 Then /^I should see "([^"]*)"$/ do |arg1|

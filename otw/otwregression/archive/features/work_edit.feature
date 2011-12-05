@@ -10,7 +10,7 @@ Feature: Edit Works
     When I am on weimar27's works page
     Then I should not see the "Edit" link
      And I should not see the "Edit Tags" link
-    When I view the work "Edit Permissions"
+    When I view a work with Metadata
     Then I should not see the "Edit" link
       And I should not see the "Add Chapter" link
       And I should not see the "Edit Tags" link

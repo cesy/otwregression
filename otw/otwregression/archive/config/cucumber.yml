@@ -5,7 +5,7 @@ std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'progress'} --strict"
 require 'bundler/setup'
 %>
 
-default: <%= std_opts %> features --tags ~@known
+default: <%= std_opts %> features
 wip: --tags @wip:3 --wip features
 rerun: <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
 rspec: --color --format nested

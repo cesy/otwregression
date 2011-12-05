@@ -1,8 +1,9 @@
+@smoke @home
 Feature: Home Page
 In order to have an archive 
 The home page needs to load
 
-  @failing
+  @read
   Scenario: The Home Page Loads
 	Given the Page loads
 	Then I can see the "people" link

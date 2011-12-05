@@ -33,6 +33,7 @@ module Archive
    element(:search_text_field) {browser.text_field(:id, "site_search")}
    element(:search_btn) {browser.button(:value, "Search")}
    element(:people_search_link) {browser.link(:text, "People Search (Alpha)")}
+   element(:header) {browser.h2(:class, "heading")}
    
    #Home Page 
    element(:home_intro) {browser.div(:class, "intro module")}
