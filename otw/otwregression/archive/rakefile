@@ -1,0 +1,31 @@
+#Generated at Sat Oct 22 19:06:15 -0700 2011
+require 'rubygems'
+require 'taza/tasks'
+require 'cucumber/rake/task'
+require 'spec_helper'
+
+Taza::Rake::Tasks.new do |t|
+  file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"
+  t.spec_opts = ["--require taza",
+                "--format html --out #{file_hole}/index.html",
+                "--format p" ,
+                "--format FailingExamplesFormatter --out #{file_hole}/failing_examples.txt"]
+end
+
+Cucumber::Rake::Task.new(:works) do |t|
+  file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"  
+  t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
+                    "--tags @works",]
+end
+
+Cucumber::Rake::Task.new(:wip) do |t|
+  file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"  
+  t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
+                    "--tags @wip",]
+end
+
+Cucumber::Rake::Task.new(:update) do |t|
+  file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"  
+  t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
+                    "--tags @update",]
+end
