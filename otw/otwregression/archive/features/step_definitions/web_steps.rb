@@ -16,7 +16,12 @@ end
 
 Then /^can click on the "([^"]*)" link$/ do |arg1|
   $arg1 = arg1
+  begin
   @site.header.link.click
+  rescue Watir::Exception
+  $arg1 = Regexp.new $arg1  
+  @site.header.link.click  
+  end
 end
 
 When /^I press the "([^"]*)" button$/ do |arg1|
@@ -31,7 +36,12 @@ end
 
 When /^I click on the "([^"]*)" link$/ do |arg1|
   $arg1 = arg1
+  begin
   @site.header.link.click
+  rescue 
+  $arg1 = Regexp.new $arg1  
+  @site.header.link.click  
+  end
 end
 
 Then /^the people page loads$/ do
@@ -128,4 +138,16 @@ end
 
 Then /^I can see the works link$/ do
   @site.header.works_link.exists? == true
+end
+
+When /^I click on the "([^"]*)" link and respond Cancel to the prompt$/ do |arg1|
+  @site.header.cancel
+  $arg1 = arg1
+  @site.header.link.click
+end
+
+When /^I click on the "([^"]*)" link and respond Ok to the prompt$/ do |arg1|
+  @site.header.ok
+  $arg1 = arg1
+  @site.header.link.click
 end

@@ -1,3 +1,6 @@
+Then /^I should be taken to the "([^"]*)" form$/ do |arg1|
+  @site.header.header.text.include?(arg1)
+end
 
 Then /^Tags should be "([^"]*)"$/ do |arg1|
   @site.works_new_page.meta_freeform.text.include?(arg1)
@@ -24,7 +27,7 @@ end
 
 
 Then /^I should see the new works form$/ do
-  @site.works_new_page.new_form.exists? == true
+  @site.works_new_page.new_form.should exist
 end
 
 Then /^I select "([^"]*)" from Rating$/ do |arg1|

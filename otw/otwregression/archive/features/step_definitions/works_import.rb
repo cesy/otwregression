@@ -11,7 +11,7 @@ Then /^I press Import$/ do
 end
 
 Then /^I press "([^"]*)"$/ do |arg1|
-  @arg1 = arg1
+  $arg1 = arg1
   @site.header.button.click
 end
 
