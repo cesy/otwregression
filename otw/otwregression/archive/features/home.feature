@@ -3,7 +3,7 @@ Feature: Home Page
 In order to have an archive 
 The home page needs to load
 
-  @read
+  @read @wip
   Scenario: The Home Page Loads
 	Given the Page loads
 	Then I can see the "people" link
@@ -13,16 +13,16 @@ The home page needs to load
 	Then I can see the "collections" link
 	Then I can see the "tags" link
     When I click on the "people" link
-      Then the people page loads
+      Then I should be taken to the People page 
     When I click on the "fandoms" link
-	  Then the fandoms page loads
+	  Then I should be taken to the "Fandoms" page
 	When I click on the "works" link
-      Then the works page loads
+      Then I should be taken to the "Works" page
 	Then I see the search box	
     When I click on the "bookmarks" link
-		Then the bookmarks page loads	
+		Then I should be taken to the "Bookmarks" page 
     When I click on the "collections" link
-		Then the collections page loads	
+		Then I should be taken to the "Collections" page 
 	 When I click on the "tags" link
-		Then the collections page loads	
+		Then I should be taken to the "Tags" page
 
