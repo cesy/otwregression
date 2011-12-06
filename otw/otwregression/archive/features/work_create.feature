@@ -31,7 +31,7 @@ Feature: Create Works
       And Content should be "Bad things happen, etc."
     When I click on the "works" link
     Then I should see my work posted with a Title of "All Hell Breaks Loose" 
-      And author "testy"
+      And author "weimar27"
    
    @normal
    Scenario: Create a new minimally valid work without previewing  
@@ -54,7 +54,7 @@ Feature: Create Works
       And Content should be "Bad things happen, etc."
 	When I click on the "works" link
     Then I should see my work posted with a Title of "Bad Day at Black Rock" 
-      And author "testy"
+      And author "weimar27"
    
    
    @normal @failing
@@ -82,7 +82,7 @@ Feature: Create Works
       And Fandoms should be "Supernatural"
       And Warning should be "No Archive Warnings Apply"
       And Work Title should be "Lazarus Rising"
-      And Author should be "testy"
+      And Author should be "weimar27"
       And Content should be "Bad things happen, etc."
       And Summary should be "Summary"
     When I press the "Post" button 
@@ -94,12 +94,12 @@ Feature: Create Works
       And Fandoms should be "Supernatural"
       And Warning should be "No Archive Warnings Apply"
       And Work Title should be "Lazarus Rising"
-      And Author should be "testy"
+      And Author should be "weimar27"
 	  And Content should be "Bad things happen, etc."
       And Summary should be "Summary"	  
 	When I click on the "works" link
     Then I should see my work posted with a Title of "Lazarus Rising"
-      And author "testy"
+      And author "weimar27"
     
    @normal @failing
    Scenario: Create a new work with no coauthor not a remix not a gift 
@@ -126,12 +126,12 @@ Feature: Create Works
       And Fandoms should be "Supernatural"
       And Warning should be "No Archive Warnings Apply"
       And Work Title should be "Wendigo"
-      And Author should be "testy"
+      And Author should be "weimar27"
 	  And Content should be "Bad things happen, etc."
 	  And Summary should be "Summary"
 	When I click on the "works" link
     Then I should see my work posted with a Title of "Wendigo"
-      And author "testy"
+      And author "weimar27"
       
    @normal
    Scenario: Create a new work with a coauthor 
@@ -184,7 +184,7 @@ Feature: Create Works
      Then I fill in the url with the archive work  
      When I press the "Post without preview" button
      Then I should see "Work was successfully posted." Notice
-       And Author should be "testy"    
+       And Author should be "weimar27"    
        And Work Title should be "Kids"
        And Rating should be "Not Rated"
        And Fandom should be "Supernatural"
@@ -212,7 +212,7 @@ Feature: Create Works
      Then I fill in "external_author" for the external work Author 
      When I press the "Post without preview" button 
      Then I should see "Work was successfully posted." Notice
-       And Author should be "testy"    
+       And Author should be "weimar27"    
        And Work Title should be "Remix"
        And Rating should be "Not Rated"
        And Fandom should be "Supernatural"
@@ -296,7 +296,7 @@ Feature: Create Works
      Then I fill in the url with the archive work  
      When I press the "Post without preview" button
      Then I should see "Work was successfully posted." Notice
-       And Author should be "testy"    
+       And Author should be "weimar27"    
        And Work Title should be "Archive Translation"
        And Rating should be "Not Rated"
        And Fandom should be "Supernatural"
@@ -325,7 +325,7 @@ Feature: Create Works
      Then I check translation
      When I press the "Post without preview" button
      Then I should see "Work was successfully posted." Notice
-       And Author should be "testy"    
+       And Author should be "weimar27"    
        And Work Title should be "External Translation"
        And Rating should be "Not Rated"
        And Fandom should be "Supernatural"
@@ -370,7 +370,7 @@ Feature: Create Works
        And I enter the title for the chapter "Pilot"
      When I press the "Post without preview" button
    Then I should see "Work was successfully posted." Notice
-      And Author should be "testy"    
+      And Author should be "weimar27"    
       And Work Title should be "Supernatural"
       And Rating should be "Not Rated"
       And Fandom should be "Supernatural"
@@ -394,7 +394,7 @@ Feature: Create Works
       And I fill in content with "Bad things happen, etc."
     When I press the "Post without preview" button
     Then I should see "Work was successfully posted." Notice
-      And Author should be "testy"    
+      And Author should be "weimar27"    
       And Work Title should be "Beware of Trojans"
       And Rating should be "Not Rated"
       And Fandoms should be "Supernatural"
@@ -417,7 +417,7 @@ Feature: Create Works
       And I fill in content with "Bad things happen, etc."
     When I press the "Post without preview" button
     Then I should see "Work was successfully posted." Notice
-      And Author should be "testy"    
+      And Author should be "weimar27"    
       And Work Title should be "Beware of Trojans"
       And Rating should be "Not Rated"
       And Fandoms should be "Supernatural"
@@ -440,7 +440,7 @@ Feature: Create Works
       And I fill in the Notes with "Beginning Notes"
     When I press the "Post without preview" button
     Then I should see "Work was successfully posted." Notice
-      And Author should be "testy"    
+      And Author should be "weimar27"    
       And Work Title should be "Wishful Thinking"
       And Rating should be "Not Rated"
       And Fandoms should be "Supernatural"
@@ -463,7 +463,7 @@ Feature: Create Works
       And I fill in the End Notes with "End Notes"
     When I press the "Post without preview" button
     Then I should see "Work was successfully posted." Notice
-      And Author should be "testy"    
+      And Author should be "weimar27"    
       And Work Title should be "Magnificent Seven"
       And Rating should be "Not Rated"
       And Fandoms should be "Supernatural"
