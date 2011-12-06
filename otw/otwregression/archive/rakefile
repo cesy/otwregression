@@ -18,6 +18,12 @@ Cucumber::Rake::Task.new(:works) do |t|
                     "--tags @works",]
 end
 
+Cucumber::Rake::Task.new(:create) do |t|
+  file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"  
+  t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
+                    "--tags @create",]
+end
+
 Cucumber::Rake::Task.new(:wip) do |t|
   file_hole = FileUtils.mkdir_p "artifacts/#{Time.now.to_i}"  
   t.cucumber_opts = ["--format html --out #{file_hole}/result.html",
