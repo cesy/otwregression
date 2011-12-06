@@ -12,7 +12,7 @@ module Archive
 
     element(:greeting_panel) {browser.div(:id, "greeting")}
     element(:icon) {browser.image(:class, "icon")}
-    #element(:post_new_btn) {browser.link(:text, "post new")}
+    element(:post_new_btn) {browser.link(:text, "post new")}
     element(:log_out_btn) {browser.link(:href, "/logout")}
     
     #Sign In div
@@ -34,6 +34,7 @@ module Archive
    element(:search_btn) {browser.button(:value, "Search")}
    element(:people_search_link) {browser.link(:text, "People Search (Alpha)")}
    element(:header) {browser.h2(:class, "heading")}
+   element(:works_blurb) {browser.ul(:class, "work index group")}
    
    #Home Page 
    element(:home_intro) {browser.div(:class, "intro module")}
@@ -57,6 +58,11 @@ module Archive
    element(:flash_notice) {browser.div(:class, "flash notice")}
    element(:notice) {browser.p(:class, "notice")}
    element(:error) {browser.div(:id, "error")}
+   
+   #JS Dialogs
+   element(:ok) {browser.execute_script("window.confirm = function() {return true}")}
+   element(:cancel) {browser.execute_script("window.prompt = function() {return null}")}
+   
    
    
    #After Scenarios
