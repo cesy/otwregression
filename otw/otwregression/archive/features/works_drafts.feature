@@ -1,4 +1,4 @@
-@works @drafts @wip
+@works @drafts
 Feature: Create Drafts
 
   

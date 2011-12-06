@@ -1,4 +1,4 @@
-@works @tags @import @create
+@works @tags @import
 Feature: Import Works
   In order to have an archive full of works
   As an author

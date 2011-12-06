@@ -2,6 +2,7 @@ require 'rubygems'
 
 module Archive
   class Header < ::Taza::Page
+    #Login Elements
     element(:sign_in_btn) {browser.div(:id,'login').a(:class, "small_login_open hidden")}
     element(:cancel_btn) {browser.div(:id, 'login').a(:class, "small_login_close hidden")}
     element(:user_name) {browser.text_field(:id, "user_session_login")}
@@ -9,38 +10,25 @@ module Archive
     element(:user_remember) {browser.checkbox(:id, "user_session_remember_me")}
     element(:user_pwd_forgot) {browser.link(:href, /new/)}
     element(:login_btn) {browser.button(:id, "user_session_submit")}
-
+    element(:log_out_btn) {browser.link(:href, "/logout")}
+    #Sign In div
+    element(:div_sign_in) {browser.div(:id, "signin")}
+    
+    #User Panel
     element(:greeting_panel) {browser.div(:id, "greeting")}
     element(:icon) {browser.image(:class, "icon")}
     element(:post_new_btn) {browser.link(:text, "post new")}
-    element(:log_out_btn) {browser.link(:href, "/logout")}
-    
-    #Sign In div
-    element(:div_sign_in) {browser.div(:id, "signin")}
 
-  #Navigation 
+   #Navigation 
    element(:link) {browser.link(:text, $arg1)}
-   element(:button) {browser.button(:value, $arg1)}
-   
-   element(:first_work) {browser.li(:class, "work blurb group").link(:href, /works/)}
-   
-   element(:fandoms_link) {browser.link(:text, "fandoms")}
-   element(:works_link) {browser.link(:text, "works")}
-   element(:people_link) {browser.link(:text, "people")}
-   element(:bookmarks_link) {browser.link(:text, "bookmarks")}
-   element(:tags_link) {browser.link(:text, "tags")}
-   element(:collections_link) {browser.link(:text, "collections")}
-   element(:search_text_field) {browser.text_field(:id, "site_search")}
-   element(:search_btn) {browser.button(:value, "Search")}
-   element(:people_search_link) {browser.link(:text, "People Search (Alpha)")}
-   element(:header) {browser.h2(:class, "heading")}
-   element(:works_blurb) {browser.ul(:class, "work index group")}
-   
    #Home Page 
    element(:home_intro) {browser.div(:class, "intro module")}
-   
+   element(:first_work) {browser.li(:class, "work blurb group").link(:href, /works/)}
+   element(:header) {browser.h2(:class, "heading")}
+   element(:works_blurb) {browser.ul(:class, "work index group")}
+
    #Button 
-   #element(:button) {browser.button(:value, $button)}
+   element(:button) {browser.button(:value, $arg1)}
    element(:user) {browser.link(:href, "/users/" + $user + "/pseuds/" + $user)}
    element(:text) {browser.text}
    element(:goto) {browser.goto $url}

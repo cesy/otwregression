@@ -1,3 +1,18 @@
+##Given 
+Given /^I'm logged out$/ do
+  @site.header.log_out_btn.click
+end
+
+##When
+When /^I click on the external link again$/ do
+  @site.works_new_page.remix_ext_link.click
+end
+
+When /^I check Remix$/ do
+  @site.works_new_page.remix_show.click
+end
+
+##Then 
 Then /^I should be taken to the "([^"]*)" form$/ do |arg1|
   @site.header.header.text.include?(arg1)
 end
@@ -20,11 +35,10 @@ Then /^Basic Tags$/ do
   @site.works_new_page.cat_other.visible? == true
 end
 
-
-When /^I go to the new works page$/ do
-  @site.header.post_new_btn.click
-end
-
+# 
+# When /^I go to the new works page$/ do
+  # @site.header.post_new_btn.click
+# end
 
 Then /^I should see the new works form$/ do
   @site.works_new_page.new_form.should exist
@@ -131,10 +145,6 @@ Then /^I can add a Co\-Author "([^"]*)"$/ do |arg1|
   @site.header.tab
 end
 
-When /^I check Remix$/ do
-  @site.works_new_page.remix_show.click
-end
-
 Then /^the Remix Panel is visible$/ do
   @site.works_new_page.remix_panel.visible? == true
 end
@@ -189,20 +199,12 @@ Then /^Notes should contain Inspired by "([^"]*)" by "([^"]*)"$/ do |arg1, arg2|
   @site.works_new_page.post_notes.text.include?(arg2)
 end
 
-When /^I click on the external link again$/ do
-  @site.works_new_page.remix_ext_link.click
-end
-
 Then /^I should see an error message with the text "([^"]*)"$/ do |arg1|
   @site.header.error.text.include?(arg1)  
 end
 
 Then /^I check Restrict to registered users$/ do
   @site.works_new_page.work_restricted.set
-end
-
-Given /^I'm logged out$/ do
-  @site.header.log_out_btn.click
 end
 
 Then /^I should not be able to view this work with the title "([^"]*)"$/ do |arg1|
@@ -262,7 +264,6 @@ end
 
 Then /^I check End Notes$/ do
   @site.works_new_page.endnotes_show.click
-  sleep 10
 end
 
 Then /^I fill in the Notes with "([^"]*)"$/ do |arg1|
