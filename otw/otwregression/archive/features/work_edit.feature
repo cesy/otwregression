@@ -28,7 +28,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with Metadata
       When I click on the "Edit" link 
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And I select "Teen And Up Audiences" from Rating
         And I select "F/M" from Category
         And I fill in Work Title with "Edit More Metadata"
@@ -71,7 +71,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with Metadata
       When I click on the "Edit" link 
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And I uncheck "F/M" from Category
         And I clear Pairing 
         And I clear Character with "Original Female Character(s)"
@@ -101,7 +101,7 @@ Feature: Edit Works
       Given I am logged in 
       When I view a work with Metadata
       When I click on the "Edit" link 
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And I can add a Co-Author "testy"
       When I press the "Post without preview" button
         And Author should be "testy, weimar27" 
@@ -111,7 +111,7 @@ Feature: Edit Works
       Given I am logged in  
       When I view a work without an Archive Gift
         And I click on the "Edit" link
-       Then I should see the new works form
+       Then I should be taken to the "Edit Works" form
         And Basic Tags
         And I fill in Gift this work to with "testy"
       When I press the "Post without preview" button
@@ -123,7 +123,7 @@ Feature: Edit Works
     Given I am logged in
       When I view a work without an External Gift
         And I click on the "Edit" link
-      Then I should see the new works form
+     Then I should be taken to the "Edit Works" form
         And Basic Tags
         And I fill in Gift this work to with "external_user"
       When I press the "Post without preview" button
@@ -146,7 +146,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with Notes
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags
         And I fill in the Notes with "New Beginning Notes"
       When I press the "Post without preview" button 
@@ -157,7 +157,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with Notes
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags
         When I uncheck Notes
            Then the Notes Field is not visible
@@ -172,7 +172,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with End Notes
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags
         And I fill in the End Notes with "New End Notes"
       When I press the "Post without preview" button
@@ -183,7 +183,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with End Notes
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags
       When I uncheck End Notes
           Then the End Notes Field is not visible
@@ -199,7 +199,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work that is a Remix
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags
       When I uncheck Remix
         Then the Remix Panel is not visible
@@ -212,7 +212,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with Metadata
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags
       When I check Remix
         Then the Remix Panel is visible
@@ -228,7 +228,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work that is Restricted
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags  
         And I uncheck Restrict to registered users
       When I press the "Post without preview" button
@@ -240,7 +240,7 @@ Feature: Edit Works
       Given I am logged in
       When I view a work with Metadata
         And I click on the "Edit" link
-      Then I should see the new works form
+      Then I should be taken to the "Edit Works" form
         And Basic Tags  
         And I check Restrict to registered users
       When I press the "Post without preview" button
@@ -253,7 +253,7 @@ Feature: Edit Works
       When I click on the "works" link
       Then the "Edit" link should be visible 
          And I click on the "Edit" link
-      Then I should see the new works form   
+      Then I should be taken to the "Edit Works" form  
     
     @normal 
     Scenario: Can access the edit form from my works index
@@ -261,7 +261,7 @@ Feature: Edit Works
       When I am on weimar27's works page
       Then the "Edit" link should be visible 
          And I click on the "Edit" link
-      Then I should see the new works form 
+      Then I should be taken to the "Edit Works" form 
     
     @normal
     Scenario: Can access the edit form when viewing a work
@@ -269,5 +269,5 @@ Feature: Edit Works
       When I view my work
       Then the "Edit" link should be visible 
          And I click on the "Edit" link
-      Then I should see the new works form     
+      Then I should be taken to the "Edit Works" form    
 
