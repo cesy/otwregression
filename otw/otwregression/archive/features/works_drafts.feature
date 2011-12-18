@@ -1,5 +1,8 @@
 @works @drafts
 Feature: Create Drafts
+   In order to have an archive full of works
+   As an author
+   I want to save drafts of new works
 
   
   Scenario: Create a Draft
